@@ -1,0 +1,241 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Sk-Modernist";
+  src: url(../fonts/Sk-Modernist-Regular.otf);
+}
+
+html,
+body {
+  background-color: #f0f2f4;
+
+  font-family: "Sk-Modernist";
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.rangeslider {
+  margin: 0;
+  background: #eeeeee;
+  height: 6px;
+  border-radius: 0;
+
+  .rangeslider__fill {
+    background-color: black;
+    border-radius: 0;
+  }
+
+  .rangeslider__handle {
+    width: 10px;
+    height: 10px;
+    background: #066A94;
+    border-radius: 0;
+    border: 0;
+
+    &:after {
+      content: unset !important;
+    }
+  }
+}
+
+.zoom-slider {
+  .rangeslider {
+    .rangeslider__fill {
+      background-color: #eeeeee;
+    }
+
+    .rangeslider__handle {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.modebar-container {
+  .modebar {
+    display: flex;
+
+    .modebar-group {
+      display: flex;
+    }
+  }
+}
+
+$tab-active-color: white;
+
+.nav-tabs {
+  border-bottom: none;
+  --bs-nav-tabs-border-width: 0;
+
+  .nav-item {
+    padding: 6px 0px;
+    background-color: rgba(240,240,240, 1);
+    
+    button {
+      padding: 0px 18px;
+    }
+  }
+
+  .nav-item:first-child {
+    padding-left: 4px;
+  }
+  .nav-item:last-child {
+    padding-right: 4px;
+  }
+
+  .nav-link {
+    color: black;
+    background-color: rgba(240,240,240, 1);
+    border-radius: 0;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: rgba(220,220,220, 1);
+    }
+  }
+
+  .nav-link.active {
+    color: black;
+    font-weight: 700;
+
+    &:hover {
+      background-color: rgba(200,200,200, 1);
+    }
+  }
+
+  
+  .today-border {
+    border-right: 1px solid #888888 !important;
+  }
+
+  // .hourly-border {
+  //   border-left: 1px solid #888888 !important;
+  //   border-right: 1px solid #888888 !important;
+  // }
+
+  .daily-border {
+    border-left: 1px solid #888888 !important;
+  }
+}
+
+table {
+  .time-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .time-title-first {
+    padding-left: 100px;
+  }
+
+  .time-first {
+    vertical-align: middle;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .time-second {
+    width: 170px;
+    align-self: center;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .time-third {
+    align-self: center;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+    line-height: 1.25rem;
+    color: white;
+  }
+}
+
+.custom-select {
+  min-width: 50px;
+  color: rgba(0, 0, 0, 0.87);
+  border: 0;
+  font-size: 14px;
+  padding: 0 2rem 0 0.2rem; 
+  border: 1px solid #D9D9D9;
+  background-image: url('./select-icon.png');
+  background-position: right 0.1rem center;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid #D9D9D9;
+  }
+
+  &:focus-visible {
+    outline-width: 0;
+  }
+}
+
+.custom-input {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0rem 0.2rem 0rem 0.2rem;
+  border: 1px solid #D9D9D9;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.react-datepicker-wrapper input {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+  border: 1px solid #D9D9D9;
+  background-repeat: no-repeat;
+  background-image: url('./calendar-icon.png');
+  background-position: right 0.1rem center;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #D9D9D9;
+  }
+}
+
+input[type=checkbox] {
+  &:focus {
+    --tw-ring-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.custom-checkbox {
+  color: white;
+
+  &:checked {
+    background-color: white;
+    background-image: none;
+  }
+}
+
+.custom-checkbox-alert {
+  color: rgb(74, 80, 96);
+  width: 14px;
+  height: 14px;
+}
+
+.capitalize-first-letter::first-letter {
+  text-transform: capitalize;
+}
